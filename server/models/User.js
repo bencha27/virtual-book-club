@@ -20,18 +20,10 @@ const userSchema = new Schema(
       required: true,
       match: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/,
     },
-    books: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: "Book",
-        unique: true,
-      }
-    ],
     posts: [
       {
         type: Schema.Types.ObjectId,
         ref: "Post",
-        unique: true,
       }
     ],
   }

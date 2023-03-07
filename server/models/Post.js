@@ -7,12 +7,12 @@ const postSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "User",
     },
-    book: {
-      type: Schema.Types.ObjectId,
-      ref: "Book",
+    postTitle: {
+      type: String,
+      required: true,
+      minLength: 1,
     },
-    chapter: String,
-    postText: {
+    postBody: {
       type: String,
       required: true,
       minLength: 1,

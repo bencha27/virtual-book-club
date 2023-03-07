@@ -18,6 +18,10 @@
   "keywords": [],
   "author": "Benjamin Cha",
   "license": "ISC",
+  "engines": {
+    "node": "16.19.0",
+    "npm": "8.19.3"
+  },
   "bugs": {
     "url": "https://github.com/bencha27/virtual-book-club/issues"
   },
