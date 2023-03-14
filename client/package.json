@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001",
-  "homepage": "https://bencha27.github.io/virtual-book-club",
+  "homepage": "https://bencha27.github.io/",
   "dependencies": {
     "@apollo/client": "^3.3.5",
     "@testing-library/jest-dom": "^5.11.4",
