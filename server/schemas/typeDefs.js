@@ -4,8 +4,8 @@ const typeDefs = gql`
   # Custom types
   type User {
     _id: ID
-    username: String
     email: String
+    username: String
     password: String
     posts: [Post]
   }
@@ -15,22 +15,30 @@ const typeDefs = gql`
     user: User
     postTitle: String
     postBody: String
+    createdAt: String
+  }
+
+  type Auth {
+    token: ID!
+    user: User
   }
 
   # Built-in types
   type Query {
     # All
-    users: [User]
-    posts: [Post]
+    allUsers: [User]
+    allPosts: [Post]
 
     # One
     user(userId: ID!): User
+    me: User
     post(postId: ID!): Post
   }
 
   type Mutation {
     # User
-    createUser(username: String!, email: String!, password: String!): User
+    createUser(email: String!, username: String!, password: String!): Auth
+    login(username: String!, password: String!): Auth
     deleteUser(userId: ID!): User
 
     # Post
