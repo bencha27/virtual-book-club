@@ -8,7 +8,7 @@ const resolvers = {
     // Find all
     // Find all users, populate associated books and posts
     allUsers: async () => {
-      return await User.find().populate("posts");
+      return await User.find().populate("posts").populate("user");
     },
     // Find all posts
     allPosts: async () => {
