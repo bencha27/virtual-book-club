@@ -11,10 +11,6 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-primary data-bs-theme='dark' mb-3">
       <div className="container-lg">
-        {/* <a className="navbar-brand" href="#">Navbar</a> */}
-        {/* <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button> */}
         <Link to="/" className="navbar-brand fw-bold fs-2">Virtual Book Club</Link>
         <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
           <div className="navbar-nav">
@@ -32,11 +28,6 @@ export default function Navbar() {
                 <Link to="/posts" className="nav-link fs-5 px-4">View Posts</Link>
               </>
             )}
-
-            {/* <a className="nav-link active" aria-current="page" href="#">Home</a>
-            <a className="nav-link" href="#">Sign Up</a>
-            <a className="nav-link" href="#">Create a Post</a>
-            <a className="nav-link" href="#">View Posts</a> */}
           </div>
         </div>
       </div>
