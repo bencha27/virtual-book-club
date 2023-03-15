@@ -11,7 +11,7 @@ export default function PostList({ posts }) {
       <div className="row justify-content-center">
         {posts && 
           posts.map((post) => (
-            <div key={post._id} className="col-md-10">
+            // <div key={post._id} className="col-md-10">
               <div className="card mb-3" >
                 <div className="card-header">
                   <h4 className="card-title">{post.postTitle}</h4>
@@ -28,10 +28,10 @@ export default function PostList({ posts }) {
                   ) : (
                     <p>{post.postBody}</p>
                   )}
-                  <Link to={`/posts/${post._id}`}>View post</Link>
+                  {/* <Link to={`/posts/${post._id}`}>View post</Link> */}
                 </div>
               </div>
-            </div>
+            // </div>
         ))}
       </div>
     </div>

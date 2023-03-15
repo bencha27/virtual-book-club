@@ -41,7 +41,11 @@ export default function User() {
     <div className="container-md">
       <div className="row justify-content-center">
         <div className="col-10">
-          <h2 className="text-center mb-4">My Account</h2>
+          {Auth.loggedIn() && Auth.getUser().data._id === userId ? (
+            <h2 className="text-center mb-4">My Account</h2>
+          ) : (
+            <h2 className="text-center mb-4">{`${user.username}'s Account`}</h2>
+          )}
           <h3 className="text-start offset-1">My posts</h3>
           {loading ? (
             <div>Loading...</div>
@@ -51,6 +55,5 @@ export default function User() {
         </div>
       </div>
     </div>
-
   );
 }
