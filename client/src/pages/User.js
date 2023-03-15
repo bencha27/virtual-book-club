@@ -23,19 +23,19 @@ export default function User() {
     return <div>Loading...</div>
   }
 
-  // if (!Auth.loggedIn()) {
-  //   return (
-  //     <div className="container-md">
-  //       <div className="row justify-content-center">
-  //         <div className="col-10">
-  //           <h4 className="text-center">
-  //             You need to be logged in to see your page. Use the navigation links above to sign up or log in.
-  //           </h4>
-  //         </div>  
-  //       </div>
-  //     </div>
-  //   );
-  // }
+  if (!Auth.loggedIn()) {
+    return (
+      <div className="container-md">
+        <div className="row justify-content-center">
+          <div className="col-10">
+            <h4 className="text-center">
+              You need to be logged in to see your page. Use the navigation links above to sign up or log in.
+            </h4>
+          </div>  
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="container-md">
