@@ -16,7 +16,7 @@ export default function PostList({ posts }) {
                 <div className="card-header">
                   <h4 className="card-title">{post.postTitle}</h4>
                   <h5 className="card-subtitle text-muted">
-                    {/* By <Link to={`/user/${post.user._id}`}>{post.user.username}</Link> */}
+                    By <Link to={`/user/${post.user._id}`}>{post.user.username}</Link>
                   <span style={{ float: "right" }}>
                       {`${new Date(Number.parseInt(post.createdAt)).toDateString()}`}
                   </span>

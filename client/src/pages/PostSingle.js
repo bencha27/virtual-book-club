@@ -24,7 +24,7 @@ export default function PostSingle() {
             <div className="card-header">
               <h3 className="card-title">{post.postTitle}</h3>
               <h5 className="card-subtitle text-muted">
-                By <Link to={`/user/${post.user._id}`}>{post.user.username}</Link>
+                By <Link to={`/`}>{post.user.username}</Link>
                 <span style={{ float: "right" }}>
                   {`${new Date(Number.parseInt(post.createdAt)).toDateString()}`}
                 </span>
