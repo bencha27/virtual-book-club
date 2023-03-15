@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import { validateEmail, validatePassword } from "../utils/helpers";
 import { useMutation } from "@apollo/client";
 import { CREATE_USER } from "../utils/mutations";
@@ -15,8 +15,6 @@ export default function Signup() {
   const [errorMessage, setErrorMessage] = useState("");
 
   const [createUser, { error, data }] = useMutation(CREATE_USER);
-
-  const navigate = useNavigate();
 
   // Function to handle changes in input fields
   const handleInputChange = (event) => {
@@ -72,7 +70,7 @@ export default function Signup() {
     })
 
     // Render "/me"
-    navigate("/me");
+    return <Navigate to="/me" />;
   };
 
   return (

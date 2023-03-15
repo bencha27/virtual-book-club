@@ -48,7 +48,7 @@ export default function Login(props) {
       password: "",
     })
 
-    // return <Navigate to="/me" replace={true} />;
+    return <Navigate to="/me" />;
   };
 
   return (
