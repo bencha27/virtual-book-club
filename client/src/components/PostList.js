@@ -28,6 +28,7 @@ export default function PostList({ posts }) {
                   ) : (
                     <p>{post.postBody}</p>
                   )}
+                  <p>{post.user}</p>
                   <Link to={`/posts/${post._id}`}>View post</Link>
                 </div>
               </div>

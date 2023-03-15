@@ -41,16 +41,26 @@ export default function User() {
     <div className="container-md">
       <div className="row justify-content-center">
         <div className="col-10">
-          {Auth.loggedIn() && Auth.getUser().data._id === userId ? (
-            <h2 className="text-center mb-4">My Account</h2>
+          {Auth.loggedIn() && Auth.getUser().data._id === user._id ? (
+            <>
+              <h2 className="text-center mb-4">My Account</h2>
+              <h3 className="text-start offset-1">My Posts</h3>
+              {loading ? (
+                <div>Loading...</div>
+              ) : (
+                <PostList posts={user.posts} />
+              )}
+            </>
           ) : (
-            <h2 className="text-center mb-4">{`${user.username}'s Account`}</h2>
-          )}
-          <h3 className="text-start offset-1">My posts</h3>
-          {loading ? (
-            <div>Loading...</div>
-          ) : (
-            <PostList posts={user.posts} />
+            <>
+              <h2 className="text-center mb-4">{`${user.username}'s Account`}</h2>
+              <h3 className="text-start offset-1">{`${user.username}'s Posts`}</h3>
+              {loading ? (
+                <div>Loading...</div>
+              ) : (
+                <PostList posts={user.posts} />
+              )}
+            </>
           )}
         </div>
       </div>
